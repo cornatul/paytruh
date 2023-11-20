@@ -3,8 +3,6 @@ build:
 	docker build -t cornatul/paytruh --progress=plain .
 build-fresh:
 	docker image rm -f cornatul/paytruh && docker build -t cornatul/paytruh --no-cache --progress=plain . --build-arg CACHEBUST=$(date +%s)
-up:
-	docker-compose -f docker-compose-prod.yml up
 up-dev:
 	docker-compose -f docker-compose.yml up  --remove-orphans
 stop:
