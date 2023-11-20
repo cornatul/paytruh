@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  paytruh:
+    build: .
+    image: cornatul/paytruh
+    container_name: paytruh
+    restart: always
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html  # replace with the path to your CodeIgniter app
